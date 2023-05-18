@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./signup-form-styles.scss";
 import Button from "../button/button.component";
 import {
@@ -17,8 +17,6 @@ const defaultFormField = {
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormField);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  console.log(formFields);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
